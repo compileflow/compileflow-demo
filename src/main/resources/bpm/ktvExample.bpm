@@ -22,8 +22,8 @@
     </action>
   </scriptTask>
   <decision id="8" name="计算费用" g="72,309,88,48">
-    <transition to="9" name="不超过300" g=":-15,20"></transition>
-    <transition to="10" priority="1" name="超过300" expression="totalPrice&gt;=300" g=":-15,20"></transition>
+    <transition to="9" priority="1" name="不超过300" g=":-15,20"></transition>
+    <transition to="10" priority="2" name="超过300" expression="totalPrice&gt;=300" g=":-15,20"></transition>
     <action type="java">
       <actionHandle clazz="com.alibaba.compileflow.demo.mock.MockJavaClazz" method="calPrice">
         <var name="p1" description="人数" dataType="java.lang.Integer" contextVarName="pList.size()" inOutType="param"></var>
