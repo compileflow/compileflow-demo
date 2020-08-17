@@ -38,3 +38,5 @@ build
 # Windows #
 Thumbs.db
 *.com
+
+.compileflow_demo.iml
