@@ -25,5 +25,11 @@ public class DemoController {
         runCase.run();
         return "Run ok.";
     }
-    
+
+    @RequestMapping("/run2")
+    public String run2() {
+        runCase.run2();
+        return "Run ok.";
+    }
+
 }

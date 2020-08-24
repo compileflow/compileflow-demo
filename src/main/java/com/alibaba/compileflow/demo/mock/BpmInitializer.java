@@ -23,6 +23,7 @@ public class BpmInitializer implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         ProcessEngine processEngine = ProcessEngineFactory.getProcessEngine();
         processEngine.load("bpm.ktvExample");
+        processEngine.load("bpm.sqrt");
     }
 
     @Bean

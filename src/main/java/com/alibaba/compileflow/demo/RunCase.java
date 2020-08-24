@@ -39,4 +39,21 @@ public class RunCase {
         }
     }
 
+    public void run2() {
+        //code在bpm文件中定义
+        String code = "bpm.sqrt";
+
+        //执行流程的入参
+        Map<String, Object> context = new HashMap<>();
+        context.put("num", 4);
+
+        try {
+            ProcessEngine processEngine = ProcessEngineFactory.getProcessEngine();
+            Map<String, Object> result = processEngine.start(code, context);
+            System.out.println(result.get("numSqrt"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
