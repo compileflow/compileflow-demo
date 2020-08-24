@@ -12,4 +12,9 @@ public class MockJavaClazz {
         System.out.println("total price: " + 30 * num);
         return 30 * num;
     }
+
+    public double sqrt(double a) {
+        return Math.sqrt(a);
+    }
+    
 }
