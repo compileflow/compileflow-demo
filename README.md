@@ -1,12 +1,17 @@
-# 1. 是什么
-这是个使用compileflow引擎的demo，方便你快速入门。
-使用了springboot方式，其他请看代码
+<img src="doc/compileflow-logo.png" alt="compileflow logo" width="20%" align="right" />
 
-# 2. demo运行
-下载代码后，由于.idea文件不会上传，所以idea打开demo时如果报：Non-managed pom.xml file found:那么请按下图配置maven环境即可:
+# Compileflow Demo
+
+使用[`compileflow`引擎](https://github.com/alibaba/compileflow)的demo，方便快速入门。
+
+使用了`springboot`方式，具体请看代码。
+
+## demo运行
+
+由于没有上传`IDE`工程文件如`IntelliJ IDEA`的`.idea`，所以`idea`打开demo时如果报：`Non-managed pom.xml file found`，那么请按下图配置`maven`环境即可:  
 ![pic1](doc/image/pic1.png)
 
-选中pom.xml
+选中`pom.xml`：  
 ![pic2](doc/image/pic2.png)
 
-最后运行DemoApplication就能启动程序
+最后运行`DemoApplication`就能启动程序。
