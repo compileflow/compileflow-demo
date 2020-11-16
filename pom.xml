@@ -10,9 +10,9 @@
         <version>2.3.1.RELEASE</version>
     </parent>
 
-    <groupId>com.alibaba</groupId>
-    <artifactId>compileflow_demo</artifactId>
-    <version>1.0</version>
+    <groupId>com.alibaba.compileflow</groupId>
+    <artifactId>compileflow-demo</artifactId>
+    <version>1.0.0-SNAPSTHO</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,16 +23,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- 后面直接依赖mvn仓库的吧 -->
         <dependency>
             <groupId>com.alibaba.compileflow</groupId>
             <artifactId>compileflow</artifactId>
-            <version>0.9.1</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/compileflow-0.9.1-jar-with-dependencies.jar</systemPath>
+            <version>1.0.0-RC2</version>
         </dependency>
     </dependencies>
-
-
 </project>
