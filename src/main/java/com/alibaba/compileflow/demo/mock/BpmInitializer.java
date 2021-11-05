@@ -4,8 +4,10 @@ import com.alibaba.compileflow.engine.ProcessEngine;
 import com.alibaba.compileflow.engine.ProcessEngineFactory;
 import com.alibaba.compileflow.engine.process.preruntime.generator.bean.SpringApplicationContextProvider;
 
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +19,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Configuration
-public class BpmInitializer implements InitializingBean {
+public class BpmInitializer implements InitializingBean, ApplicationContextAware {
 
     @Override
     public void afterPropertiesSet() throws Exception {
@@ -26,9 +28,9 @@ public class BpmInitializer implements InitializingBean {
         processEngine.preCompile("bpm.sqrt");
     }
 
-    @Bean
-    public SpringApplicationContextProvider getSpringApplicationContextProvider() {
-        return new SpringApplicationContextProvider();
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        SpringApplicationContextProvider.applicationContext = applicationContext;
     }
 
 }

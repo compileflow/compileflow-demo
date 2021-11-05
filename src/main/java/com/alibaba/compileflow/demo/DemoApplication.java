@@ -18,9 +18,4 @@ public class DemoApplication {
         System.out.println("DemoApplication start ok!!!");
     }
 
-    @Bean
-    public SpringApplicationContextProvider getSpringApplicationContextProvider() {
-        return new SpringApplicationContextProvider();
-    }
-
 }
